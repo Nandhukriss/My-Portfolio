@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import SkeletonLoader from "./Skeletons/SkillSkeletonLoader";
 import html from "../assets/html.png";
 import css from "../assets/css.png";
 import javascript from "../assets/javascript.png";
@@ -21,128 +22,145 @@ import github from "../assets/github.png";
 import docker from "../assets/docker.png";
 
 const Skills = () => {
-  const skills = [
-    {
-      id: 1,
-      src: html,
-      title: "HTML",
-      style: "shadow-orange-500",
-    },
-    {
-      id: 2,
-      src: css,
-      title: "CSS",
-      style: "shadow-blue-500",
-    },
-    {
-      id: 3,
-      src: bootstrap,
-      title: "Bootstrap",
-      style: "shadow-purple-500",
-    },
-    {
-      id: 4,
-      src: tailwind,
-      title: "TailwindCSS",
-      style: "shadow-cyan-500",
-    },
-    {
-      id: 5,
-      src: javascript,
-      title: "Javascript",
-      style: "shadow-yellow-500",
-    },
-    {
-      id: 6,
-      src: jquery,
-      title: "Jquery",
-      style: "shadow-blue-700",
-    },
-    {
-      id: 7,
-      src: react,
-      title: "React",
-      style: "shadow-teal-500",
-    },
-    {
-      id: 8,
-      src: python,
-      title: "Python",
-      style: "shadow-blue-500",
-    },
-    {
-      id: 9,
-      src: django,
-      title: "Django",
-      style: "shadow-green-400",
-    },
-    {
-      id: 10,
-      src: flask,
-      title: "Flask",
-      style: "shadow-gray-400",
-    },
-    {
-      id: 11,
-      src: fastapi,
-      title: "Fastapi",
-      style: "shadow-green-300",
-    },
-    {
-      id: 12,
-      src: selenium,
-      title: "Selenium",
-      style: "shadow-blue-400",
-    },
-    {
-      id: 13,
-      src: mysql,
-      title: "Mysql",
-      style: "shadow-orange-400",
-    },
-    {
-      id: 14,
-      src: postgres,
-      title: "PostgreSQL",
-      style: "shadow-blue-700",
-    },
-    {
-      id: 15,
-      src: sqlite,
-      title: "SQlite",
-      style: "shadow-blue-300",
-    },
-    {
-      id: 16,
-      src: mongodb,
-      title: "MongoDB",
-      style: "shadow-green-400",
-    },
-    {
-      id: 17,
-      src: git,
-      title: "Git",
-      style: "shadow-orange-400",
-    },
-    {
-      id: 18,
-      src: postman,
-      title: "Postman",
-      style: "shadow-orange-400",
-    },
-    {
-      id: 19,
-      src: github,
-      title: "Github",
-      style: "shadow-gray-400",
-    },
-    {
-      id: 20,
-      src: docker,
-      title: "Docker",
-      style: "shadow-blue-400",
-    },
-  ];
+  const [loading, setLoading] = useState(true);
+  const [Allskills, setSkills] = useState([]);
+
+  useEffect(() => {
+    const fetchSkillsData = () => {
+      setTimeout(() => {
+        setSkills(
+          [
+            {
+              id: 1,
+              src: html,
+              title: "HTML",
+              style: "shadow-orange-500",
+            },
+            {
+              id: 2,
+              src: css,
+              title: "CSS",
+              style: "shadow-blue-500",
+            },
+            {
+              id: 3,
+              src: bootstrap,
+              title: "Bootstrap",
+              style: "shadow-purple-500",
+            },
+            {
+              id: 4,
+              src: tailwind,
+              title: "TailwindCSS",
+              style: "shadow-cyan-500",
+            },
+            {
+              id: 5,
+              src: javascript,
+              title: "Javascript",
+              style: "shadow-yellow-500",
+            },
+            {
+              id: 6,
+              src: jquery,
+              title: "Jquery",
+              style: "shadow-blue-700",
+            },
+            {
+              id: 7,
+              src: react,
+              title: "React",
+              style: "shadow-teal-500",
+            },
+            {
+              id: 8,
+              src: python,
+              title: "Python",
+              style: "shadow-blue-500",
+            },
+            {
+              id: 9,
+              src: django,
+              title: "Django",
+              style: "shadow-green-400",
+            },
+            {
+              id: 10,
+              src: flask,
+              title: "Flask",
+              style: "shadow-gray-400",
+            },
+            {
+              id: 11,
+              src: fastapi,
+              title: "Fastapi",
+              style: "shadow-green-300",
+            },
+            {
+              id: 12,
+              src: selenium,
+              title: "Selenium",
+              style: "shadow-blue-400",
+            },
+            {
+              id: 13,
+              src: mysql,
+              title: "Mysql",
+              style: "shadow-orange-400",
+            },
+            {
+              id: 14,
+              src: postgres,
+              title: "PostgreSQL",
+              style: "shadow-blue-700",
+            },
+            {
+              id: 15,
+              src: sqlite,
+              title: "SQlite",
+              style: "shadow-blue-300",
+            },
+            {
+              id: 16,
+              src: mongodb,
+              title: "MongoDB",
+              style: "shadow-green-400",
+            },
+            {
+              id: 17,
+              src: git,
+              title: "Git",
+              style: "shadow-orange-400",
+            },
+            {
+              id: 18,
+              src: postman,
+              title: "Postman",
+              style: "shadow-orange-400",
+            },
+            {
+              id: 19,
+              src: github,
+              title: "Github",
+              style: "shadow-gray-400",
+            },
+            {
+              id: 20,
+              src: docker,
+              title: "Docker",
+              style: "shadow-blue-400",
+            },
+          ]
+        );
+        setLoading(false);
+      }, 2000); // Simulated delay of 2 seconds
+    };
+
+    fetchSkillsData();
+  }, []);
+
+
+  
   return (
     <div
       name="skills"
@@ -166,19 +184,24 @@ const Skills = () => {
         </div>
 
         <div className="w-full grid sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4  gap-8 text-center py-2 sm:px-0">
-          {skills.map(({ id, src, title, style }) => (
-            <div
-              key={id}
-              className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
-            >
-              <img src={src} alt="html logo" className="w-20 mx-auto mb-2" />
-              <p>{title}</p>
-            </div>
-          ))}
+        {loading ? (
+            <SkeletonLoader item={20} />
+          ) : (
+            Allskills.map(({ id, src, title, style }) => (
+              <div
+                key={id}
+                className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
+              >
+                <img src={src} alt={`${title} logo`} className="w-20 mx-auto mb-2" />
+                <p>{title}</p>
+              </div>
+            ))
+          )}
         </div>
       </div>
     </div>
   );
 };
+
 
 export default Skills;

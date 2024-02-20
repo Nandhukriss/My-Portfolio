@@ -1,53 +1,69 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import ProjectSkeletonLoader from "./Skeletons/ProjectSkeletonLoader";
 import clickbuy from "../assets/projects/clickbuy.png";
 import hospital from "../assets/projects/hospital.png";
 function Projects() {
-  const projects = [
-    {
-      id: 1,
-      title:
-        "Automatic Censorable Content Identification in Movies Using Deeplearning ",
-      src: "https://github.com/Nandhukriss/Automatic-Censorable-Content-Identification-In-movies-Using-DeepLearning-Flask/assets/103727372/31120b3d-9775-4a67-a983-5774da7a55fb",
-      tags: ["Python,flask,javascript,Jquery,Ajax,DL,Yolo5"],
-      demo: false,
-      code: true,
-      demoLink: "",
-      codeLink:
-        "https://github.com/Nandhukriss/Automatic-Censorable-Content-Identification-In-movies-Using-DeepLearning-Flask",
-    },
-    {
-      id: 2,
-      title: "ClickBuy An E-Commerce Website",
-      src: clickbuy,
-      tags: ["Python,javascript,Jquery,Bootstrap,Ajax,RazorPay"],
-      demo: false,
-      code: false,
-      demoLink: "",
-      codeLink: "",
-    },
-    {
-      id: 3,
-      title: "Public Tech/Entertainment Blog",
-      src: "https://github.com/Nandhukriss/Public-Tech-Entertainment-Blog-using-Django/assets/103727372/cb06e9cc-382e-4b44-a0e4-950df5a2d63c",
-      tags: ["Python,javascript,Bootstrap,PostgreSQL"],
-      demo: false,
-      code: true,
-      demoLink: "",
-      codeLink:
-        "https://github.com/Nandhukriss/Public-Tech-Entertainment-Blog-using-Django",
-    },
-    {
-      id: 4,
-      title: "Hospital Appointment booking System",
-      src: hospital,
-      tags: ["Python,javascript", "Django"],
-      demo: true,
-      code: true,
-      demoLink: "http://nandhukris.pythonanywhere.com/",
-      codeLink:
-        "https://github.com/Nandhukriss/Hospital-Appointment-booking-django",
-    },
-  ];
+  const [loading, setLoading] = useState(true);
+  const [Allprojects, setProjects] = useState([]);
+
+  useEffect(() => {
+
+    const fetchProjectsData = () => {
+      setTimeout(() => {
+        setProjects([
+          {
+            id: 1,
+            title:
+              "Automatic Censorable Content Identification in Movies Using Deeplearning ",
+            src: "https://github.com/Nandhukriss/Automatic-Censorable-Content-Identification-In-movies-Using-DeepLearning-Flask/assets/103727372/31120b3d-9775-4a67-a983-5774da7a55fb",
+            tags: ["Python,flask,javascript,Jquery,Ajax,DL,Yolo5"],
+            demo: false,
+            code: true,
+            demoLink: "",
+            codeLink:
+              "https://github.com/Nandhukriss/Automatic-Censorable-Content-Identification-In-movies-Using-DeepLearning-Flask",
+          },
+          {
+            id: 2,
+            title: "ClickBuy An E-Commerce Website",
+            src: clickbuy,
+            tags: ["Python,javascript,Jquery,Bootstrap,Ajax,RazorPay"],
+            demo: false,
+            code: false,
+            demoLink: "",
+            codeLink: "",
+          },
+          {
+            id: 3,
+            title: "Public Tech/Entertainment Blog",
+            src: "https://github.com/Nandhukriss/Public-Tech-Entertainment-Blog-using-Django/assets/103727372/cb06e9cc-382e-4b44-a0e4-950df5a2d63c",
+            tags: ["Python,javascript,Bootstrap,PostgreSQL"],
+            demo: false,
+            code: true,
+            demoLink: "",
+            codeLink:
+              "https://github.com/Nandhukriss/Public-Tech-Entertainment-Blog-using-Django",
+          },
+          {
+            id: 4,
+            title: "Hospital Appointment booking System",
+            src: hospital,
+            tags: ["Python,javascript", "Django"],
+            demo: true,
+            code: true,
+            demoLink: "http://nandhukris.pythonanywhere.com/",
+            codeLink:
+              "https://github.com/Nandhukriss/Hospital-Appointment-booking-django",
+          },
+        ]);
+        setLoading(false);
+      }, 2000); // Simulated delay of 2 seconds
+    };
+
+    fetchProjectsData();
+  }, []);
+
+
   return (
     <div
       name="projects"
@@ -71,8 +87,10 @@ function Projects() {
         </div>
 
         <div className="grid sm:grid-cols-1 place-items-center md:grid-cols-2  gap-10  sm:px-0">
-          {projects.map(
-            ({ id, src, tags, title, demo, code, demoLink, codeLink }) => (
+        {loading ? (
+            <ProjectSkeletonLoader item={Allprojects.length} /> 
+          ) : (
+            Allprojects.map(({ id, src, tags, title, demo, code, demoLink, codeLink }) => (
               <div
                 key={id}
                 className="w-full h-full rounded-md overflow-hidden shadow-sm  shadow-gray-50
@@ -82,7 +100,7 @@ function Projects() {
                   <img
                     className="w-full h-full object-fill rounded-md  "
                     src={src}
-                    alt="Sunset in the mountains"
+                    alt="Project Thumbnail"
                   />
                 </div>
 
@@ -161,7 +179,7 @@ text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-50
                   )}
                 </div>
               </div>
-            )
+            ))
           )}
         </div>
       </div>

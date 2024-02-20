@@ -12,6 +12,17 @@ import { IoIosContact } from "react-icons/io";
 
 export const Navbar = () => {
   const [nav, setnav] = useState(false);
+  const [navColour, updateNavbar] = useState(false);
+
+  function scrollHandler() {
+    if (window.scrollY >= 20) {
+      updateNavbar(true);
+    } else {
+      updateNavbar(false);
+    }
+  }
+
+  window.addEventListener("scroll", scrollHandler);
   const links = [
     {
       id: 1,
@@ -72,6 +83,8 @@ export const Navbar = () => {
     },
     {
       id: 7,
+      GoLink:'https://github.com/Nandhukriss/My-Portfolio',
+      anchor:true,
       link: (
         <div className="flex items-center ">
           <FaGithub size={25} />
@@ -96,16 +109,21 @@ export const Navbar = () => {
     // },
   ];
   return (
-    <div className="flex justify-between items-center w-full h-20 text-white bg-black fixed px-4  z-10 ">
+    <div className={
+      navColour?(
+
+        `flex justify-between items-center w-full h-12 text-white bg-cyan-800  fixed px-4  z-10`
+      ):`flex justify-between items-center w-full h-12 text-white bg-black  fixed px-4  z-10`
+      }>
       <div></div>
-      <ul className="hidden md:flex">
-        {links.map(({ id, link, GoLink, download }) => (
+      <ul className="hidden md:flex ">
+        {links.map(({ id, link, GoLink, download ,anchor}) => (
           <li
             key={id}
-            className="px-4 cursor-pointer capitalize font-medium text-2xl text-gray-500 hover:scale-105 duration-200"
+            className="px-4 cursor-pointer  capitalize font-medium text-lg text-white-500 hover:scale-105 duration-200"
             download={download}
           >
-            {download ? (
+            {download |anchor ? (
               <a
                 href={GoLink}
                 download
@@ -130,14 +148,14 @@ export const Navbar = () => {
       </div>
 
       {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500 capitalize md:hidden">
-          {links.map(({ id, link, GoLink, download }) => (
+        <ul className="flex flex-col justify-center items-center  absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500 capitalize md:hidden">
+          {links.map(({ id, link, GoLink, download,anchor }) => (
             <li
               key={id}
-              className="px-4 cursor-pointer capitalize text-4xl py-6  text-gray-500 hover:scale-105 duration-200"
+              className="px-4 cursor-pointer capitalize text-2xl py-6  text-gray-500 hover:scale-105 duration-200"
               download={download}
             >
-              {download ? (
+              {download |anchor ? (
                 <a
                   href={GoLink}
                   download
