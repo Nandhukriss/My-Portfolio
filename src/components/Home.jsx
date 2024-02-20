@@ -2,7 +2,7 @@ import React from "react";
 import HeroImage from "../assets/heroImage.png";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import Type from "./Type.jsx";
-import ReactFloaterJs from "react-floaterjs";
+import './floater.css';
 import { Link } from "react-scroll";
 export const Home = () => {
   return (
@@ -23,13 +23,14 @@ export const Home = () => {
         </h1>
 
         <div className="flex flex-col justify-center items-center px-6">
-          <ReactFloaterJs>
-            <img
-              src={HeroImage}
-              alt="profile pic"
-              className="rounded-lg mx-auto md:mx-6 w-2/3 md:w-full  shadow-md shadow-white "
-            />
-          </ReactFloaterJs>
+          <div className="floating-image-container">
+
+          <img
+            src={HeroImage}
+            alt="profile pic"
+            className="rounded-lg mx-auto md:mx-6 w-2/3 md:w-full  shadow-md shadow-white "
+          />
+          </div>
 
           <h2 className="text-4xl sm:text-4xl font-bold mt-10">
             <Type />
