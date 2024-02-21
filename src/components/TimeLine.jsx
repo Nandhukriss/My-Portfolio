@@ -4,7 +4,7 @@ export const TimeLine = () => {
   return (
     <div
       name="experience"
-      className="w-full bg-gradient-to-b from-gray-800 via-black to-gray-800 text-white"
+      className="w-full bg-gradient-to-b from-gray-800 via-black to-black text-white"
     >
       <section class="items-center py-24 font-poppins dark:bg-gray-800">
         <div class="justify-center max-w-6xl px-4 py-4 mx-auto lg:py-8 md:px-6">
