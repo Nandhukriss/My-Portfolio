@@ -1,5 +1,5 @@
 import { Home } from "./components/Home";
-import { Navbar } from "./components/Navbar";
+import { Navbar } from "./components/navbar";
 import { SocialLinks } from "./components/SocialLinks";
 import { TimeLine } from "./components/TimeLine";
 import Projects from "./components/Projects";
@@ -28,7 +28,7 @@ function App() {
           <Navbar />
           <Home />
           <TimeLine />
-          <Skills />
+          {/* <Skills /> */}
           <Projects />
           <SocialLinks />
           <Contact />

@@ -1,5 +1,5 @@
 import React from "react";
-import HeroImage from "../assets/heroImage.png";
+import HeroImage from "../assets/heroImage.jpg";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import Type from "./Type.jsx";
 import './floater.css';
@@ -11,7 +11,7 @@ export const Home = () => {
       className="h-screen w-full  bg-gradient-to-b from-black via-black to-gray-800 text-white"
     >
       <div className="max-w-screen  mx-auto flex flex-col md:flex-column items-center justify-center px-4 h-full ">
-        <h1 class="mb-4 mt-36 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-3xl lg:text-4xl dark:text-white">
+        <h1 class="mb-4 mt-44 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-3xl lg:text-4xl dark:text-white">
           {" "}
           <span class="text-cyan-600 dark:text-cyan-500">
             Hi There{" "}
@@ -19,7 +19,10 @@ export const Home = () => {
               👋🏻
             </span>{" "}
           </span>{" "}
+          <span className="text-white"> 
+
           I'm R S Nandhu Krishna
+          </span>
         </h1>
 
         <div className="flex flex-col justify-center items-center px-6">
