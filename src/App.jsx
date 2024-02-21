@@ -28,7 +28,7 @@ function App() {
           <Navbar />
           <Home />
           <TimeLine />
-          {/* <Skills /> */}
+          <Skills />
           <Projects />
           <SocialLinks />
           <Contact />
