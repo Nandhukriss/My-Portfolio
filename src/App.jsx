@@ -1,5 +1,5 @@
 import { Home } from "./components/Home";
-import { Navbar } from "./components/navbar";
+import { Navbar } from "./components/Navbar";
 import { SocialLinks } from "./components/SocialLinks";
 import { TimeLine } from "./components/TimeLine";
 import Projects from "./components/Projects";
