@@ -49,7 +49,7 @@ export const SocialLinks = () => {
     },
   ];
   return (
-    <div className=" md:flex flex-col top-[35%] left-0 fixed ">
+    <div className=" md:flex hidden  flex-col top-[35%] left-0 fixed ">
       <ul>
         {social.map(({ id, child, href, style }) => (
           <li
