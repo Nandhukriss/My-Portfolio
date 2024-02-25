@@ -11,7 +11,8 @@ export const TimeLine = () => {
           <div class="max-w-xl mx-auto">
             <div class="text-center ">
               <div class=" flex flex-col items-center">
-                <h1 class="text-6xl font-bold leading-tight dark:text-gray-300">
+              
+                <h1 class="text-2xl md:text-4xl lg:text-6xl font-bold leading-tight dark:text-gray-300">
                   {" "}
                   Experience
                 </h1>

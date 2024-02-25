@@ -36,7 +36,7 @@ function Contact() {
         className="mx-auto mt-16 max-w-xl sm:mt-20"
       >
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-          <div>
+          <div className="sm:mx-2">
             <label
               htmlFor="first-name"
               className="block text-sm font-semibold leading-6  text-white"
@@ -54,7 +54,7 @@ function Contact() {
               />
             </div>
           </div>
-          <div>
+          <div className="sm:mx-2">
             <label
               htmlFor="last-name"
               className="block text-sm font-semibold leading-6  text-white"
@@ -73,7 +73,7 @@ function Contact() {
             </div>
           </div>
 
-          <div className="sm:col-span-2">
+          <div className="sm:col-span-2 sm:mx-2">
             <label
               htmlFor="email"
               className="block text-sm font-semibold leading-6  text-white"
@@ -92,7 +92,7 @@ function Contact() {
             </div>
           </div>
 
-          <div className="sm:col-span-2">
+          <div className="sm:col-span-2 sm:mx-2">
             <label
               htmlFor="message"
               className="block text-sm font-semibold leading-6  text-white"
@@ -110,7 +110,7 @@ function Contact() {
             </div>
           </div>
         </div>
-        <div className="mt-3">
+        <div className="mt-3 sm:mx-2">
           <button
             type="submit"
             className="block w-full rounded-md  bg-cyan-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-cyan-600  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-800 "
