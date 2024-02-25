@@ -7,6 +7,9 @@ import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import PageLoader from "./components/PageLoader";
 import { useEffect, useState } from "react";
+import { inject } from '@vercel/analytics';
+ 
+inject();
 
 function App() {
   const [loading, setLoading] = useState(true);
