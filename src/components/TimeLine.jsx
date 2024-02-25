@@ -9,13 +9,12 @@ export const TimeLine = () => {
       <section class="items-center py-24 font-poppins dark:bg-gray-800">
         <div class="justify-center max-w-6xl px-4 py-4 mx-auto lg:py-8 md:px-6">
           <div class="max-w-xl mx-auto">
-            <div class="text-center ">
+            <div class="text-center">
               <div class=" flex flex-col items-center">
-              
-                <h1 class="text-2xl md:text-4xl lg:text-6xl font-bold leading-tight dark:text-gray-300">
-                  {" "}
-                  Experience
-                </h1>
+              <p className="text-4xl font-bold leading-tight dark:text-gray-300 text-center ">
+              {" "}
+              Experience
+             </p>
                 <div class="flex w-24 mt-1 mb-10 overflow-hidden rounded">
                   <div class="flex-1 h-2 bg-cyan-200"></div>
                   <div class="flex-1 h-2 bg-cyan-400"></div>

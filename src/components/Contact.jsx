@@ -4,7 +4,7 @@ function Contact() {
   return (
     <div
       name="contact"
-      className="bg-gradient-to-b from-gray-800 to-black w-full h-screen text-white"
+      className="bg-gradient-to-b from-gray-800 to-black w-full h-full text-white"
     >
       <div
         className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
