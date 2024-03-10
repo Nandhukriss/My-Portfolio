@@ -11,9 +11,9 @@ export const Home = () => {
       className="h-screen w-full  bg-gradient-to-b from-black via-black to-gray-800 text-white"
     >
       <div className="max-w-screen  mx-auto flex flex-col md:flex-column items-center justify-center px-4 h-full ">
-        <h1 class="mb-4 mt-44 text-lg font-extrabold leading-none tracking-tight text-gray-900 md:text-3xl lg:text-4xl dark:text-white">
+        <h1 className="mb-4 mt-44 text-lg font-extrabold leading-none tracking-tight text-gray-900 md:text-3xl lg:text-4xl dark:text-white">
           {" "}
-          <span class="text-cyan-600 dark:text-cyan-500">
+          <span className="text-cyan-600 dark:text-cyan-500">
             Hi There{" "}
             <span className="wave" role="img" aria-labelledby="wave">
               👋🏻
@@ -34,10 +34,10 @@ export const Home = () => {
             className="rounded-lg mx-auto md:mx-6 w-2/3 md:w-full  shadow-md border-3 border-gray-400 shadow-cyan-500 "
           />
           </div>
-
-          <p className="text-lg sm:text-3xl font-bold mt-10">
+       
+          <div className="text-lg sm:text-3xl font-bold mt-10">
             <Type />
-          </p>
+          </div>
           <div className="flex flex-col justify-center h-full">
             <p className="text-gray-200 text-sm py-5 max-w-sm  hover:text-cyan-100">
               I'am a Computer Science Engineering Graduate and Software

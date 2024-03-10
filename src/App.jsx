@@ -8,7 +8,9 @@ import Contact from "./components/Contact";
 import PageLoader from "./components/PageLoader";
 import { useEffect, useState } from "react";
 import { inject } from '@vercel/analytics';
+import { injectSpeedInsights } from '@vercel/speed-insights';
  
+injectSpeedInsights();
 inject();
 
 function App() {
